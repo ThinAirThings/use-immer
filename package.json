@@ -1,5 +1,5 @@
 {
-  "name": "use-immer",
+  "name": "@thinairthings/use-immer",
   "version": "0.9.0",
   "description": "Use immer with React hooks",
   "main": "dist/use-immer.js",
@@ -23,11 +23,12 @@
   "sideEffects": false,
   "scripts": {
     "build": "microbundle",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "npmpub": "npm run build && git add . && git commit -m \"mod\" && git push && npm version patch && npm publish --access public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mweststrate/use-immer.git"
+    "url": "git+https://github.com/thinairthings/use-immer.git"
   },
   "files": [
     "dist/"
@@ -37,12 +38,7 @@
     "react",
     "hooks"
   ],
-  "author": "Michel Weststrate",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mweststrate/use-immer/issues"
-  },
-  "homepage": "https://github.com/mweststrate/use-immer#readme",
   "peerDependencies": {
     "immer": ">=2.0.0",
     "react": "^16.8.0 || ^17.0.1 || ^18.0.0"
@@ -51,6 +47,7 @@
     "@types/react": "^16.9.56",
     "immer": "^9.0.0 || ^10.0.0",
     "microbundle": "^0.15.1",
+    "tsup": "^8.0.2",
     "typescript": "^4.0.5"
   }
 }
